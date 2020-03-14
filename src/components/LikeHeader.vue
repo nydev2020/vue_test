@@ -1,7 +1,7 @@
 <template>
   <div>
+    <slot name="title" v-bind:user="userName"></slot>
     <slot></slot>
-    <slot name="title"></slot>
     <hr>
     <p>いいねの数</p>
     <slot name="number"></slot>
@@ -10,6 +10,13 @@
 
 <script>
 export default {
-  props: ["headerText"]
+  data: function() {
+    return {
+      userName: {
+        firstName: "Jack",
+        lastName: "Donald",
+      }
+    }
+  }
 };
 </script>

@@ -3,8 +3,10 @@
     <LikeHeader>
       <h4>腹へった</h4>
       <p>デフォ</p>
-      <template v-slot:title>
+
+      <template v-slot:title="slotProps">
         <h1>トータルのいいね数</h1>
+        <h2>{{ slotProps }}</h2>
       </template>
       <template v-slot:number>
         <h2>{{ number }}</h2>

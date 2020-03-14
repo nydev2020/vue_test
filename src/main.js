@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 //コンポーネントのグローバル登録
-import LikeNumber from "./LikeNumber"
+import LikeNumber from "./components/LikeNumber"
 
 Vue.config.productionTip = false
 //コンポーネントのグローバル登録

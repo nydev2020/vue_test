@@ -1,10 +1,14 @@
 <template>
   <div>
     <LikeHeader>
-      <template>
+      <h4>腹へった</h4>
+      <p>デフォ</p>
+      <template v-slot:title>
         <h1>トータルのいいね数</h1>
       </template>
-      <h2>{{ number }}</h2>
+      <template v-slot:number>
+        <h2>{{ number }}</h2>
+      </template>
     </LikeHeader>
     <LikeNumber v-bind:total-number="number" v-on:my-click="$event"></LikeNumber>
     <LikeNumber v-bind:total-number="number"></LikeNumber>

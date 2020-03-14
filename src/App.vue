@@ -1,11 +1,20 @@
 <template>
-  
+  <div>
+    <LikeHeader></LikeHeader>
+    <LikeNumber></LikeNumber>
+  </div>
 </template>
 
 <script>
+//コンポーネントのローカル登録
+import LikeHeader from "./LikeHeader.vue"
 
+export default {
+  //コンポーネントのローカル登録
+  components: {
+    //keyとvalueが同一の時は短縮できる ES6の記法
+    LikeHeader
+    // LikeHeader: LikeHeader
+  }
+}
 </script>
-
-<style>
-
-</style>

@@ -19,7 +19,7 @@ export default {
       return this.totalNumber / 2
     }
   },
-  
+
   methods: {
     increment: function() {
       //子側からの送り口
@@ -30,7 +30,4 @@ export default {
 </script>
 
 <style scoped>
-  div {
-    border: 5px solid red;
-  }
 </style>

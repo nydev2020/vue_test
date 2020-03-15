@@ -1,3 +1,3 @@
 <template>
-  <p>ホーム</p>
+  <p v-border>ホーム</p>
 </template>

@@ -20,9 +20,8 @@
 
     <div style="padding: 0 3rem; line-height: .2;">
       <h2>イベントのフォーム</h2>
-      <label for="title">タイトル</label>
-      <input type="text" id="title" v-model="eventData.title">
-      <pre>{{ eventData.title }}</pre>
+      <EventTitle v-model="eventData.title"></EventTitle>
+     
       <label for="maxNumber">最大人数</label>
       <input type="number" id="maxNumber" v-model.number="eventData.maxNumber">
       <p>{{ eventData.maxNumber }}</p>
@@ -66,6 +65,7 @@
 import LikeHeader from "./components/LikeHeader.vue";
 import About from "./components/About.vue";
 import Home from "./components/Home.vue";
+import EventTitle from "./components/EventTitle.vue";
 
 export default {
   data: function() {
@@ -95,8 +95,9 @@ export default {
     LikeHeader,
     About,
     Home,
-  }
-}
+    EventTitle,
+  },
+};
 </script>
 <style>
 </style>

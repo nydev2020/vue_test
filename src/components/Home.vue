@@ -1,9 +1,22 @@
 <template>
-  <p v-border:doted.round.shodow="'5px'">ホーム</p>
+  <div>
+    <p v-border:doted.round.shodow="'5px'">ホーム</p>
+    <h2>{{ title | upperCase }}</h2>
+    <p>{{ subTitle | upperCase }}</p>
+    <h2>{{ title | lowerCase }}</h2>
+    <p>{{ subTitle | lowerCase }}</p>
+  </div>
 </template>
 
 <script>
 export default {
+  data: function() {
+    return {
+      title: "Welcome to Tokyo",
+      subTitle: "Tokyo is a great city"
+    }
+  },
+
   // カスタムディレクティブのローカル登録
   directives: {
     border: function(el, binding) {
@@ -16,6 +29,12 @@ export default {
       if (binding.modifiers) {
         el.style.boxShodow = "0 3px 5px rgba(0, 0, 0, 0.5)";
       }
+    }
+  },
+  //フィルターのローカル登録
+  filters: {
+    lowerCase: function(value) {
+      return value.toLowerCase();
     }
   }
 };
